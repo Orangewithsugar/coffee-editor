@@ -10,7 +10,7 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.eclipse.emfcloud.coffee.modelserver</artifactId>
+	<artifactId>com.musemodeling.mogine.sysml.modelserver</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
 	<parent>
@@ -131,7 +131,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>org.eclipse.emfcloud.coffee.modelserver.launch.CoffeeModelServerLauncher</mainClass>
+									<mainClass>com.musemodeling.mogine.sysml.modelserver.launch.SysMLModelServerLauncher</mainClass>
 									<!-- Due to Log4j 2 Performance issue with Java 11, see also https://issues.apache.org/jira/browse/LOG4J2-2537 -->
 									<manifestEntries>
 										<Multi-Release>true</Multi-Release>
