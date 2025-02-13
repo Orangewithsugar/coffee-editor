@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: com.musemodeling.mogine.sysml.modelserver.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: MUSEMODELING
+Fragment-Host: com.musemodeling.mogine.sysml.modelserver;bundle-version="0.8.0"
+Require-Bundle: junit-jupiter-api;bundle-version="5.9.1",
+ com.google.gson;bundle-version="2.9.1",
+ junit-jupiter-params;bundle-version="5.9.1",
+ junit-jupiter-engine;bundle-version="5.9.1"
+Automatic-Module-Name: com.musemodeling.mogine.sysml.modelserver.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-21
