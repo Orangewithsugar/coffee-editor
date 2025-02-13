@@ -22,5 +22,6 @@ public class SysMLPackageConfiguration implements EPackageConfiguration {
 	@Override
 	public void registerEPackage() {
 		SysMLPackage.eINSTANCE.eClass();
+		
 	}
 }

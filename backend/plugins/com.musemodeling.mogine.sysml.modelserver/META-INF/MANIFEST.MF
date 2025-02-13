@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Mogine Modelserver
 Bundle-SymbolicName: com.musemodeling.mogine.sysml.modelserver;singleton:=true
 Bundle-Version: 0.8.0.qualifier
-Automatic-Module-Name: org.eclipse.emfcloud.coffee.modelserver
+Automatic-Module-Name: com.musemodeling.mogine.sysml.modelserver
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: MUSEMODELING
 Require-Bundle: org.eclipse.emf.ecore;bundle-version="[2.26.0,3.0.0)",
@@ -36,11 +36,21 @@ Require-Bundle: org.eclipse.emf.ecore;bundle-version="[2.26.0,3.0.0)",
  org.slf4j.api;bundle-version="[1.7.30,2.0.0)",
  org.apache.logging.log4j;bundle-version="2.17.1",
  org.aopalliance;bundle-version="[1.0.0,2.0.0)",
- org.omg.sysml;bundle-version="0.46.0"
-Export-Package: org.eclipse.emfcloud.coffee.modelserver,
- org.eclipse.emfcloud.coffee.modelserver.commands.compound,
- org.eclipse.emfcloud.coffee.modelserver.commands.contributions,
- org.eclipse.emfcloud.coffee.modelserver.commands.semantic,
- org.eclipse.emfcloud.coffee.modelserver.commands.util,
- org.eclipse.emfcloud.coffee.modelserver.launch
-Import-Package: javax.inject;version="[1.0.0,2.0.0)"
+ javax.inject;bundle-version="1.0.0"
+Export-Package: com.musemodeling.mogine.sysml.modelserver;
+  uses:="org.eclipse.emfcloud.modelserver.emf.configuration,
+   org.eclipse.emf.ecore,
+   org.eclipse.emfcloud.modelserver.emf.common,
+   org.eclipse.emf.ecore.xmi.impl,
+   org.eclipse.emfcloud.modelserver.notation.integration,
+   org.eclipse.emf.ecore.xmi,
+   org.eclipse.emfcloud.modelserver.common.utils,
+   org.eclipse.emfcloud.modelserver.emf.common.watchers,
+   com.google.inject,
+   org.eclipse.emf.common.util,
+   org.eclipse.emfcloud.modelserver.common.codecs,
+   org.eclipse.emf.ecore.resource,
+   org.eclipse.emf.common.notify,
+   com.fasterxml.jackson.databind",
+ com.musemodeling.mogine.sysml.modelserver.launch,
+ com.musemodeling.mogine.sysml.modelserver.util

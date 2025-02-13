@@ -15,7 +15,9 @@ import { join, resolve } from 'path';
 const SERVER_DIR_PATH = join(__dirname, '..', '..', 'servers');
 
 const BACKEND_VERSION = '0.8.0-SNAPSHOT';
-const JAR_FILE_PATH = resolve(join(SERVER_DIR_PATH, `org.eclipse.emfcloud.coffee.modelserver-${BACKEND_VERSION}-standalone.jar`));
+// const JAR_FILE_PATH = resolve(join(SERVER_DIR_PATH, `org.eclipse.emfcloud.coffee.modelserver-${BACKEND_VERSION}-standalone.jar`));
+// const LOG_FILE_PATH = resolve(join(SERVER_DIR_PATH, 'model-server-log4j2-embedded.xml'));
+const JAR_FILE_PATH = resolve(join(SERVER_DIR_PATH, `com.musemodeling.mogine.sysml.modelserver-${BACKEND_VERSION}-standalone.jar`));
 const LOG_FILE_PATH = resolve(join(SERVER_DIR_PATH, 'model-server-log4j2-embedded.xml'));
 
 /** Options for the `ModelServerLauncher` to use to start the Model Server */

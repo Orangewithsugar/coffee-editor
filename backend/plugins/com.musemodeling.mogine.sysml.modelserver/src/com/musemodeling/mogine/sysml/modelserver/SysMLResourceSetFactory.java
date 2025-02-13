@@ -11,11 +11,16 @@
 package com.musemodeling.mogine.sysml.modelserver;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emfcloud.modelserver.emf.common.DefaultResourceSetFactory;
 import org.eclipse.emfcloud.modelserver.integration.SemanticFileExtension;
 import org.eclipse.emfcloud.modelserver.notation.integration.NotationFileExtension;
 import org.eclipse.emfcloud.modelserver.notation.integration.NotationResource;
+import org.omg.sysml.delegate.invocation.OperationInvocationDelegateFactory;
+import org.omg.sysml.delegate.setting.DerivedPropertySettingDelegateFactory;
+
 import com.google.inject.Inject;
 
 public class SysMLResourceSetFactory extends DefaultResourceSetFactory {
@@ -30,11 +35,11 @@ public class SysMLResourceSetFactory extends DefaultResourceSetFactory {
 	@Override
 	public ResourceSet createResourceSet(final URI modelURI) {
 		ResourceSet result = super.createResourceSet(modelURI);
-//		EStructuralFeature.Internal.SettingDelegate.Factory.Registry.INSTANCE.
-//				put("http://www.omg.org/spec/SysML", new DerivedPropertySettingDelegateFactory());
-//
-//		EOperation.Internal.InvocationDelegate.Factory.Registry.INSTANCE.
-//				put("http://www.omg.org/spec/SysML", new OperationInvocationDelegateFactory());
+		EStructuralFeature.Internal.SettingDelegate.Factory.Registry.INSTANCE.
+				put("http://www.omg.org/spec/SysML", new DerivedPropertySettingDelegateFactory());
+
+		EOperation.Internal.InvocationDelegate.Factory.Registry.INSTANCE.
+				put("http://www.omg.org/spec/SysML", new OperationInvocationDelegateFactory());
 		result.getResourceFactoryRegistry().getExtensionToFactoryMap().put(semanticFileExtension,
 				SysMLResource.FACTORY);
 		result.getResourceFactoryRegistry().getExtensionToFactoryMap().put(notationFileExtension,

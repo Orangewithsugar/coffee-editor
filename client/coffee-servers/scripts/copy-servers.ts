@@ -16,9 +16,11 @@ const start = new Date(Date.now());
 const BACKEND_VERSION = '0.8.0-SNAPSHOT';
 
 // Model Server
-const modelServerPath = join(__dirname, '..', '..', '..', 'backend', 'plugins', 'org.eclipse.emfcloud.coffee.modelserver');
+// const modelServerPath = join(__dirname, '..', '..', '..', 'backend', 'plugins', 'org.eclipse.emfcloud.coffee.modelserver');
+const modelServerPath = join(__dirname, '..', '..', '..', 'backend', 'plugins', 'com.musemodeling.mogine.sysml.modelserver');
 const modelServerLogConfigPath = join(modelServerPath, 'log4j2-embedded.xml');
-const modelServerExecutable = `org.eclipse.emfcloud.coffee.modelserver-${BACKEND_VERSION}-standalone.jar`;
+// const modelServerExecutable = `org.eclipse.emfcloud.coffee.modelserver-${BACKEND_VERSION}-standalone.jar`;
+const modelServerExecutable = `com.musemodeling.mogine.sysml.modelserver-${BACKEND_VERSION}-standalone.jar`;
 const modelServerJarPath = join(modelServerPath, 'target', modelServerExecutable);
 
 // GLSP Server
